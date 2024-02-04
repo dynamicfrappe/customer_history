@@ -1,0 +1,272 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-02-04 13:45:29.731389",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "referance_number",
+  "sector",
+  "amount",
+  "column_break_3",
+  "suggestion",
+  "payment_order_date",
+  "financial_approval_date",
+  "column_break_12",
+  "project_name",
+  "status",
+  "beneficiary",
+  "column_break_13",
+  "commitment",
+  "statement",
+  "section_break_16",
+  "exchange_status",
+  "exchange_amount",
+  "column_break_20",
+  "exchange_type",
+  "exchange_date",
+  "column_break_19",
+  "notes",
+  "section_break_25",
+  "project__management",
+  "project_status",
+  "project_sector",
+  "sector_name",
+  "column_break_28",
+  "status_project__management",
+  "commitment_type",
+  "project_payment_method"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Naming Series",
+   "options": "CUS-HIS-.YYYY.-",
+   "translatable": 1
+  },
+  {
+   "fieldname": "referance_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Referance Number",
+   "translatable": 1
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sector",
+   "options": "Sector"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_standard_filter": 1,
+   "label": "Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "suggestion",
+   "fieldtype": "Currency",
+   "in_standard_filter": 1,
+   "label": "Suggestion",
+   "options": "currency"
+  },
+  {
+   "fieldname": "payment_order_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Payment Order Date"
+  },
+  {
+   "fieldname": "financial_approval_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Financial Approval Date"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Delay\nCancel\nLoading\nPrivate\nPublic\nCommon\nDelivered",
+   "translatable": 1
+  },
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Beneficiary",
+   "translatable": 1
+  },
+  {
+   "fieldname": "commitment",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Commitment",
+   "options": "Commitment"
+  },
+  {
+   "fieldname": "statement",
+   "fieldtype": "Data",
+   "label": "Statement",
+   "translatable": 1
+  },
+  {
+   "fieldname": "exchange_status",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Exchange Status",
+   "options": "Exchange Status"
+  },
+  {
+   "fieldname": "exchange_amount",
+   "fieldtype": "Currency",
+   "label": "Exchange Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "exchange_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Exchange Way",
+   "options": "Exchange Way"
+  },
+  {
+   "fieldname": "exchange_date",
+   "fieldtype": "Date",
+   "label": "Exchange Date"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Long Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "project__management",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Project / Management",
+   "translatable": 1
+  },
+  {
+   "fieldname": "project_status",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Project Status",
+   "translatable": 1
+  },
+  {
+   "fieldname": "project_sector",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Project sector",
+   "translatable": 1
+  },
+  {
+   "fieldname": "sector_name",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Sector Name",
+   "options": "Sector"
+  },
+  {
+   "fieldname": "status_project__management",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Status Project / Management",
+   "options": "Delay\nCancel\nLoading\nPrivate\nPublic\nCommon\nDelivered",
+   "translatable": 1
+  },
+  {
+   "fieldname": "commitment_type",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Commitment Type",
+   "options": "Commitment"
+  },
+  {
+   "fieldname": "project_payment_method",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project Payment Method",
+   "options": "Project Payment Method"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "column_break_12",
+   "fieldtype": "Section Break",
+   "label": "Project"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "column_break_19",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-04 16:30:07.886104",
+ "modified_by": "Administrator",
+ "module": "Customer History",
+ "name": "Customer History",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
