@@ -13,7 +13,7 @@
  "is_standard": 1,
  "label": "Customers",
  "links": [],
- "modified": "2024-02-07 17:04:42.894961",
+ "modified": "2024-02-18 13:45:01.911359",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Customers",
@@ -55,6 +55,12 @@
    "doc_view": "List",
    "label": "Project Payment Method",
    "link_to": "Project Payment Method",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Customer Project Name",
+   "link_to": "Customer Project Name",
    "type": "DocType"
   }
  ]

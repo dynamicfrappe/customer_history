@@ -1,31 +1,26 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
- "creation": "2024-02-04 14:02:04.588111",
+ "creation": "2024-02-18 13:30:03.561212",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1"
+  "project"
  ],
  "fields": [
   {
-   "fieldname": "name1",
+   "fieldname": "project",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Name",
-   "translatable": 1,
-   "unique": 1
+   "label": "Project"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-18 13:35:35.332016",
+ "modified": "2024-02-18 13:30:03.561212",
  "modified_by": "Administrator",
  "module": "Customer History",
- "name": "Exchange Status",
+ "name": "Customer Project Name",
  "owner": "Administrator",
  "permissions": [
   {
