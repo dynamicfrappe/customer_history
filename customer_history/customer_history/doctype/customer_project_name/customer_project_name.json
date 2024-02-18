@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:project",
  "creation": "2024-02-18 13:30:03.561212",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -12,12 +13,13 @@
   {
    "fieldname": "project",
    "fieldtype": "Data",
-   "label": "Project"
+   "label": "Project",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-18 13:30:03.561212",
+ "modified": "2024-02-18 16:52:20.071385",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Customer Project Name",
