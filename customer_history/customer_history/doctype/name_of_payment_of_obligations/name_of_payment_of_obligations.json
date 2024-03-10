@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-10 14:03:32.525297",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_of_obligations",
+  "commitment_amount",
+  "commitment_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_of_obligations",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment of Obligations",
+   "options": "Payment of Obligations"
+  },
+  {
+   "fieldname": "commitment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Commitment Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "commitment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Commitment Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-10 17:19:13.447986",
+ "modified_by": "Administrator",
+ "module": "Customer History",
+ "name": "Name of Payment of Obligations",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

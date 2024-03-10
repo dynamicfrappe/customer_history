@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-10 17:16:51.401058",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "commitment_number",
+  "commitment_type",
+  "commitment_amount",
+  "payment_amount",
+  "residual",
+  "column_break_7lqhs",
+  "exchange_status",
+  "exchange_way",
+  "suggestion",
+  "exchange_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "commitment_number",
+   "fieldtype": "Data",
+   "label": "Commitment Number"
+  },
+  {
+   "fieldname": "commitment_type",
+   "fieldtype": "Data",
+   "label": "Commitment Type"
+  },
+  {
+   "fieldname": "commitment_amount",
+   "fieldtype": "Currency",
+   "label": "Commitment Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Payment Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "residual",
+   "fieldtype": "Currency",
+   "label": "Residual",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_7lqhs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "exchange_status",
+   "fieldtype": "Link",
+   "label": "Exchange Status",
+   "options": "Exchange Status"
+  },
+  {
+   "fieldname": "exchange_way",
+   "fieldtype": "Link",
+   "label": "Exchange Way",
+   "options": "Exchange Way"
+  },
+  {
+   "fieldname": "suggestion",
+   "fieldtype": "Data",
+   "label": "Suggestion"
+  },
+  {
+   "fieldname": "exchange_date",
+   "fieldtype": "Date",
+   "label": "Exchange Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-10 17:19:32.257229",
+ "modified_by": "Administrator",
+ "module": "Customer History",
+ "name": "Payment of Obligations",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
