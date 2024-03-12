@@ -1,50 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-03-10 17:16:51.401058",
+ "autoname": "naming_series:",
+ "creation": "2024-03-12 15:59:24.418605",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "commitment_number",
   "commitment_type",
-  "commitment_amount",
   "payment_amount",
   "residual",
   "column_break_7lqhs",
   "exchange_status",
   "exchange_way",
   "suggestion",
-  "exchange_date"
+  "exchange_date",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "commitment_number",
-   "fieldtype": "Data",
-   "label": "Commitment Number"
+   "fieldtype": "Link",
+   "label": "Commitment Number",
+   "options": "Customer History"
   },
   {
+   "fetch_from": "commitment_number.commitment_type",
    "fieldname": "commitment_type",
    "fieldtype": "Data",
    "label": "Commitment Type"
   },
   {
-   "fieldname": "commitment_amount",
-   "fieldtype": "Currency",
-   "label": "Commitment Amount",
-   "options": "currency"
-  },
-  {
-   "fieldname": "payment_amount",
-   "fieldtype": "Currency",
-   "label": "Payment Amount",
-   "options": "currency"
-  },
-  {
    "fieldname": "residual",
    "fieldtype": "Currency",
    "label": "Residual",
-   "options": "currency"
+   "options": "currency",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_7lqhs",
@@ -71,16 +64,50 @@
    "fieldname": "exchange_date",
    "fieldtype": "Date",
    "label": "Exchange Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment of Obligations",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "options": "PAY-OBL-.YYYY.-"
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Payment Amount",
+   "options": "currency"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-03-10 17:19:32.257229",
+ "modified": "2024-03-12 22:13:06.919366",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Payment of Obligations",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
  "sort_field": "modified",
  "sort_order": "DESC"
 }
