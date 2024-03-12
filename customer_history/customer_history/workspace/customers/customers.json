@@ -13,7 +13,7 @@
  "is_standard": 1,
  "label": "Customers",
  "links": [],
- "modified": "2024-02-18 13:45:01.911359",
+ "modified": "2024-03-12 22:21:01.891693",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Customers",
@@ -31,6 +31,12 @@
    "doc_view": "List",
    "label": "Sector",
    "link_to": "Sector",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Beneficiary",
+   "link_to": "Beneficiary",
    "type": "DocType"
   },
   {
@@ -61,6 +67,12 @@
    "doc_view": "List",
    "label": "Customer Project Name",
    "link_to": "Customer Project Name",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Payment of Obligations",
+   "link_to": "Payment of Obligations",
    "type": "DocType"
   }
  ]
