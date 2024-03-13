@@ -5,4 +5,8 @@
 from frappe.model.document import Document
 
 class CustomerHistory(Document):
-	pass
+	def before_save(self):
+		self.calculate_residual()
+
+	def calculate_residual(self):
+		self.residual = self.payment_amount - self.total_commitment_amount

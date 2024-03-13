@@ -11,6 +11,7 @@
   "commitment_number",
   "commitment_type",
   "payment_amount",
+  "commitment_amount",
   "residual",
   "column_break_7lqhs",
   "exchange_status",
@@ -29,8 +30,10 @@
   {
    "fetch_from": "commitment_number.commitment_type",
    "fieldname": "commitment_type",
-   "fieldtype": "Data",
-   "label": "Commitment Type"
+   "fieldtype": "Link",
+   "label": "Commitment Type",
+   "options": "Commitment Type",
+   "read_only": 1
   },
   {
    "fieldname": "residual",
@@ -84,12 +87,20 @@
    "fieldtype": "Currency",
    "label": "Payment Amount",
    "options": "currency"
+  },
+  {
+   "fetch_from": "commitment_number.payment_amount",
+   "fieldname": "commitment_amount",
+   "fieldtype": "Currency",
+   "label": "Commitment Amount",
+   "options": "currency",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-12 22:13:06.919366",
+ "modified": "2024-03-13 15:00:23.989996",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Payment of Obligations",

@@ -12,7 +12,6 @@
   "project_name",
   "commitment_type",
   "column_break_3",
-  "exchange_amount",
   "payment_order_date",
   "financial_approval_date",
   "column_break_12",
@@ -22,14 +21,14 @@
   "beneficiary",
   "statement",
   "section_break_16",
+  "payment_amount",
+  "residual",
+  "column_break_gbzp2",
+  "total_commitment_amount",
   "column_break_19",
   "notes",
   "section_break_sh7cb",
-  "commitment",
-  "section_break_yr9w9",
-  "payment_amount",
-  "column_break_gbzp2",
-  "total_commitment_amount"
+  "commitment"
  ],
  "fields": [
   {
@@ -99,12 +98,6 @@
    "translatable": 1
   },
   {
-   "fieldname": "exchange_amount",
-   "fieldtype": "Currency",
-   "label": "Exchange Amount",
-   "options": "currency"
-  },
-  {
    "fieldname": "notes",
    "fieldtype": "Long Text",
    "label": "Notes"
@@ -137,14 +130,7 @@
    "fieldname": "commitment",
    "fieldtype": "Table",
    "label": "Commitment",
-   "options": "Name of Payment of Obligations",
-   "read_only": 1
-  },
-  {
-   "fieldname": "payment_amount",
-   "fieldtype": "Currency",
-   "label": "Payment Amount",
-   "options": "currency"
+   "options": "Name of Payment of Obligations"
   },
   {
    "fieldname": "column_break_gbzp2",
@@ -153,7 +139,7 @@
   {
    "fieldname": "total_commitment_amount",
    "fieldtype": "Currency",
-   "label": "Total Commitment Amount",
+   "label": "Total Payment Amount",
    "options": "currency",
    "read_only": 1
   },
@@ -162,18 +148,28 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_yr9w9",
-   "fieldtype": "Section Break"
+   "fieldname": "commitment_type",
+   "fieldtype": "Link",
+   "label": "Commitment Type",
+   "options": "Commitment Type"
   },
   {
-   "fieldname": "commitment_type",
-   "fieldtype": "Data",
-   "label": "Commitment Type"
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "label": "Commitment Amount",
+   "options": "currency"
+  },
+  {
+   "fieldname": "residual",
+   "fieldtype": "Currency",
+   "label": "Residual",
+   "options": "currency",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-12 22:05:56.706932",
+ "modified": "2024-03-13 15:15:59.181432",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Customer History",
