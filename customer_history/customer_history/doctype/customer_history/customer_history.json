@@ -130,7 +130,8 @@
    "fieldname": "commitment",
    "fieldtype": "Table",
    "label": "Commitment",
-   "options": "Name of Payment of Obligations"
+   "options": "Name of Payment of Obligations",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_gbzp2",
@@ -169,7 +170,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-13 15:15:59.181432",
+ "modified": "2024-03-14 10:23:45.275691",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Customer History",
