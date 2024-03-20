@@ -1,6 +1,7 @@
 # For license information, please see license.txt
 
 import frappe
+from frappe import _
 from frappe.utils import now
 from frappe.model.document import Document
 
@@ -15,7 +16,12 @@ class PaymentofObligations(Document):
 
 	def calculate_residual(self):
 		customer_history = frappe.get_doc("Customer History" , self.commitment_number)
-		self.residual = customer_history.payment_amount - customer_history.total_commitment_amount - self.payment_amount
+		residual_before = customer_history.payment_amount - customer_history.total_commitment_amount 
+		residual_after = customer_history.payment_amount - customer_history.total_commitment_amount - self.payment_amount
+		if residual_after < 0 :
+			frappe.throw(_(f"The residual should pay {residual_before} only"))
+		self.residual = residual_after
+
 	
 	def append_payment_of_obligations(self):
 		customer_history = frappe.get_doc("Customer History" , self.commitment_number)
