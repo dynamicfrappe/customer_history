@@ -26,7 +26,8 @@ class PaymentofObligations(Document):
 	def append_payment_of_obligations(self):
 		customer_history = frappe.get_doc("Customer History" , self.commitment_number)
 		customer_history.append("commitment" , {
-				"payment_of_obligations" : self.name,
+				"voucher_type" : self.doctype ,
+				"voucher_no" : self.name,
 				"commitment_amount" :self.payment_amount , 
 				"commitment_date" : now()
 		})

@@ -13,7 +13,7 @@
  "is_standard": 1,
  "label": "Customers",
  "links": [],
- "modified": "2024-03-12 22:21:01.891693",
+ "modified": "2024-04-17 15:13:47.834941",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Customers",
@@ -73,6 +73,12 @@
    "doc_view": "List",
    "label": "Payment of Obligations",
    "link_to": "Payment of Obligations",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Payment of Total Obligations",
+   "link_to": "Payment of Total Obligations",
    "type": "DocType"
   }
  ]

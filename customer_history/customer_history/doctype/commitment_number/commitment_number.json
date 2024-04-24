@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-17 14:36:55.839690",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "commitment",
+  "payment_amount",
+  "amount",
+  "commitment_type",
+  "residual",
+  "beneficiary",
+  "exchange_status",
+  "exchange_way",
+  "suggestion",
+  "exchange_date"
+ ],
+ "fields": [
+  {
+   "fetch_from": "commitment.payment_amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Commitment Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payment Amount",
+   "options": "currency"
+  },
+  {
+   "fetch_from": "commitment.commitment_type",
+   "fieldname": "commitment_type",
+   "fieldtype": "Link",
+   "label": "Commitment Type",
+   "options": "Commitment Type"
+  },
+  {
+   "fieldname": "residual",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Residual",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "commitment.beneficiary",
+   "fieldname": "beneficiary",
+   "fieldtype": "Link",
+   "label": "Beneficiary",
+   "options": "Beneficiary"
+  },
+  {
+   "fieldname": "exchange_status",
+   "fieldtype": "Link",
+   "label": "Exchange Status",
+   "options": "Exchange Status"
+  },
+  {
+   "fieldname": "exchange_way",
+   "fieldtype": "Link",
+   "label": "Exchange Way",
+   "options": "Exchange Way"
+  },
+  {
+   "fieldname": "suggestion",
+   "fieldtype": "Data",
+   "label": "Suggestion"
+  },
+  {
+   "fieldname": "exchange_date",
+   "fieldtype": "Data",
+   "label": "Exchange Date"
+  },
+  {
+   "fieldname": "commitment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Commitment",
+   "options": "Customer History"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-17 15:49:58.426697",
+ "modified_by": "Administrator",
+ "module": "Customer History",
+ "name": "Commitment Number",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
