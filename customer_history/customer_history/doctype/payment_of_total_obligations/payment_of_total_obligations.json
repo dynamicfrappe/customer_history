@@ -11,6 +11,7 @@
   "exchange_date",
   "column_break_b7nzb",
   "amount",
+  "get",
   "section_break_jvo48",
   "commitments",
   "amended_from"
@@ -54,12 +55,18 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "options": "PAY-TOT-OBL-.YYYY.-"
+  },
+  {
+   "depends_on": "eval:doc.amount",
+   "fieldname": "get",
+   "fieldtype": "Button",
+   "label": "Get"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-17 15:57:42.594585",
+ "modified": "2024-05-08 14:51:19.775352",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Payment of Total Obligations",

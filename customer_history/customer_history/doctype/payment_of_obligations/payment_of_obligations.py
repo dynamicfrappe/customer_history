@@ -6,9 +6,9 @@ from frappe.utils import now
 from frappe.model.document import Document
 
 class PaymentofObligations(Document):
-	def before_save(self):
-		if self.commitment_number :
-			self.calculate_residual()
+	# def before_save(self):
+	# 	if self.commitment_number :
+	# 		self.calculate_residual()
 
 	def before_submit(self):
 		if self.commitment_number :

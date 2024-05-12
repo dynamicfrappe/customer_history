@@ -37,6 +37,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "commitment_number.residual",
    "fieldname": "residual",
    "fieldtype": "Currency",
    "label": "Residual",
@@ -109,7 +110,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-20 11:00:33.950916",
+ "modified": "2024-05-12 10:25:52.870851",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Payment of Obligations",
