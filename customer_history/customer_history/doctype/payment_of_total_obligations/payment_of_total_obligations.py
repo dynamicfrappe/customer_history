@@ -53,6 +53,8 @@ class PaymentofTotalObligations(Document):
             self.append("commitments",{
                 "commitment" : customer.name,
                 "commitment_amount" : customer.payment_amount,
-                "residual" : customer.residual
+                "residual" : customer.residual,
+                "beneficiary" : customer.beneficiary,
+                "project" : customer.project_name
             })
 
