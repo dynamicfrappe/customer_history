@@ -96,12 +96,16 @@ app_license = "MIT"
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+#     "Payment of Total Obligations":{
+#         "on_update":"customer_history.payment_of_total_obligations.payment_of_total_obligations.validatees"
+# 	}
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
 # }
+
 
 # Scheduled Tasks
 # ---------------
