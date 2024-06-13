@@ -14,6 +14,12 @@
   "get",
   "section_break_jvo48",
   "commitments",
+  "totals_section",
+  "total_payment_amount",
+  "total_residual",
+  "column_break_f15j2",
+  "difference",
+  "total_commitment_amount",
   "amended_from"
  ],
  "fields": [
@@ -61,12 +67,41 @@
    "fieldname": "get",
    "fieldtype": "Button",
    "label": "Get"
+  },
+  {
+   "fieldname": "total_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Total payment amount"
+  },
+  {
+   "fieldname": "total_commitment_amount",
+   "fieldtype": "Currency",
+   "label": "Total commitment amount"
+  },
+  {
+   "fieldname": "total_residual",
+   "fieldtype": "Currency",
+   "label": "Total residual"
+  },
+  {
+   "fieldname": "difference",
+   "fieldtype": "Currency",
+   "label": "Difference"
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "column_break_f15j2",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-08 14:51:19.775352",
+ "modified": "2024-06-13 14:46:15.110467",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Payment of Total Obligations",

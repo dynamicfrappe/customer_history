@@ -12,6 +12,12 @@ frappe.ui.form.on('Payment of Total Obligations', {
 				fieldtype: "Link",
 				options : "Customer Project Name"
 			  },
+			  {
+				label: "Beneficiary",
+				fieldname: "beneficiary",
+				fieldtype: "Link",
+				options: "Beneficiary"
+			 }
 			],
 			primary_action_label: "Submit",
 			primary_action(values) {
@@ -19,7 +25,9 @@ frappe.ui.form.on('Payment of Total Obligations', {
 				frm.call({
 					doc: frm.doc,
 					method: "get_customer_history",
-					args: {project : values.project},
+					args: {project : values.project,
+						beneficiary:values.beneficiary
+					},
 					callback: function (r) {
 						frm.refresh_field('commitments')
 					},
@@ -29,3 +37,5 @@ frappe.ui.form.on('Payment of Total Obligations', {
 		  });
 		  d.show();	}
 });
+
+

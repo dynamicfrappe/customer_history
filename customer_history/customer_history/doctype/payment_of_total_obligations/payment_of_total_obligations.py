@@ -10,6 +10,7 @@ class PaymentofTotalObligations(Document):
     def before_save(self):
         # self.calculate_residual()
         self.validate_commitment_amount()
+        self.validatees()
 
     def before_submit(self):
         self.append_payment_of_obligations()
@@ -21,6 +22,25 @@ class PaymentofTotalObligations(Document):
                 sum += commitment.payment_amount
         if self.amount != sum :
             frappe.throw(_("Amount of payment of total obligations not equal total of commitment amount "))
+    def validatees(self):
+        total_payment = 0
+        total_commitment = 0
+        total_residual = 0
+
+        for commitment in self.commitments:
+            if  commitment.payment_amount:
+                total_payment += commitment.payment_amount
+            if commitment.commitment_amount:
+                total_commitment += commitment.commitment_amount
+            if commitment.residual:
+                total_residual += commitment.residual    
+
+        self.total_payment_amount = total_payment
+        self.total_commitment_amount = total_commitment
+        self.total_residual = total_residual
+        self.difference = total_payment - self.amount 
+
+           
 
 
     # def calculate_residual(self):
@@ -43,18 +63,42 @@ class PaymentofTotalObligations(Document):
                         "commitment_date" : now()
                 })
                 customer_history.total_commitment_amount += commitment.payment_amount
-                customer_history.save()
+                customer_history.save()             
+
 
     @frappe.whitelist()
-    def get_customer_history(self , project):
-        customers = frappe.get_all("Customer History" , filters = {"project_name" : project} , pluck="name")
-        for customer in customers :
-            customer = frappe.get_doc("Customer History"  , customer)
-            self.append("commitments",{
-                "commitment" : customer.name,
-                "commitment_amount" : customer.payment_amount,
-                "residual" : customer.residual,
-                "beneficiary" : customer.beneficiary,
-                "project" : customer.project_name
+    def get_customer_history(self, project, beneficiary=None):
+        filters = {"project_name": project}
+        if beneficiary:
+            filters["beneficiary"] = beneficiary
+        
+        customers = frappe.get_all("Customer History", filters=filters, pluck="name")
+        for customer in customers:
+            customer = frappe.get_doc("Customer History", customer)
+            self.append("commitments", {
+                "commitment": customer.name,
+                "commitment_amount": customer.payment_amount,
+                "residual": customer.residual,
+                "beneficiary": customer.beneficiary,
+                "project": customer.project_name
             })
 
+
+# @frappe.whitelist()            
+# def validatees(doc, method):
+#         total_payment = 0
+#         total_commitment = 0
+#         total_residual = 0
+
+#         for commitment in doc.commitments:
+#             if  commitment.payment_amount:
+#                 total_payment += commitment.payment_amount
+#             if commitment.commitment_amount:
+#                 total_commitment += commitment.commitment_amount
+#             if commitment.residual:
+#                 total_residual += commitment.residual    
+
+#         doc.total_payment_amount = total_payment
+#         doc.total_commitment_amount = total_commitment
+#         doc.total_residual = total_residual
+#         doc.difference = total_payment - doc.amount 
