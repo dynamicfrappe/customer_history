@@ -97,13 +97,13 @@ app_license = "MIT"
 
 # doc_events = {
 #     "Payment of Total Obligations":{
-#         "on_update":"customer_history.payment_of_total_obligations.payment_of_total_obligations.validatees"
+#         "validate":"customer_history.payment_of_total_obligations.payment_of_total_obligations.validatees"
 # 	}
-	# "*": {
-	# 	"on_update": "method",
-	# 	"on_cancel": "method",
-	# 	"on_trash": "method"
-	# }
+# 	# "*": {
+# 	# 	"on_update": "method",
+# 	# 	"on_cancel": "method",
+# 	# 	"on_trash": "method"
+# 	# }
 # }
 
 
