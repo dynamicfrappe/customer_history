@@ -10,7 +10,7 @@ class PaymentofTotalObligations(Document):
     def before_save(self):
         # self.calculate_residual()
         self.validate_commitment_amount()
-        self.validatees()
+        # self.validatees()
 
     def before_submit(self):
         self.append_payment_of_obligations()
@@ -38,7 +38,6 @@ class PaymentofTotalObligations(Document):
         self.total_payment_amount = total_payment
         self.total_commitment_amount = total_commitment
         self.total_residual = total_residual
-        self.difference = total_payment - self.amount 
 
            
 
