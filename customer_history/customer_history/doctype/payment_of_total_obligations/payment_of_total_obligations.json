@@ -20,6 +20,7 @@
   "column_break_f15j2",
   "difference",
   "total_commitment_amount",
+  "number_of_commitments",
   "amended_from"
  ],
  "fields": [
@@ -96,12 +97,18 @@
   {
    "fieldname": "column_break_f15j2",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_commitments",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number of Commitments"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-13 14:46:15.110467",
+ "modified": "2024-06-25 12:17:26.938994",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Payment of Total Obligations",
