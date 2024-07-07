@@ -17,7 +17,8 @@
   "exchange_way",
   "suggestion",
   "exchange_date",
-  "project"
+  "project",
+  "sector"
  ],
  "fields": [
   {
@@ -106,12 +107,18 @@
    "in_list_view": 1,
    "label": "Statement",
    "read_only": 1
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Link",
+   "label": "Sector",
+   "options": "Sector"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-06-26 08:24:19.841637",
+ "modified": "2024-07-07 15:40:21.491653",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Commitment Number",
