@@ -55,6 +55,18 @@ frappe.ui.form.on('Payment of Total Obligations', {
                     fieldname: "beneficiary",
                     fieldtype: "Link",
                     options: "Beneficiary"
+                },
+                {
+                    label: "Sector",
+                    fieldname: "sector",
+                    fieldtype: "Link",
+                    options: "Sector"
+                },
+                {
+                    label: "Commitment Type",
+                    fieldname: "commitment_type",
+                    fieldtype: "Link",
+                    options: "Commitment Type"
                 }
             ],
             primary_action_label: "Submit",
@@ -64,7 +76,9 @@ frappe.ui.form.on('Payment of Total Obligations', {
                     method: "get_customer_history",
                     args: {
                         project: values.project,
-                        beneficiary: values.beneficiary
+                        beneficiary: values.beneficiary,
+                        sector:values.sector,
+                        commitment_type:values.commitment_type
                     },
                     callback: function(r) {
                         let totalResidual = 0;

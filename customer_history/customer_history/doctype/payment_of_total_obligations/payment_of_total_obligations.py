@@ -73,10 +73,14 @@ class PaymentofTotalObligations(Document):
 
 
     @frappe.whitelist()
-    def get_customer_history(self, project, beneficiary=None):
+    def get_customer_history(self, project, beneficiary=None,sector=None,commitment_type=None):
         filters = {"project_name": project}
         if beneficiary:
             filters["beneficiary"] = beneficiary
+        if sector:
+            filters["sector"] = sector
+        if commitment_type:
+           filters["commitment_type"] = commitment_type         
         
         customers = frappe.get_all("Customer History", filters=filters, pluck="name")
         for customer in customers:
