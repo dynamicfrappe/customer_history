@@ -9,5 +9,5 @@ class CustomerHistory(Document):
 		self.calculate_residual()
 
 	def calculate_residual(self):
-		if self.total_commitment_amount :
+		if self.payment_amount :
 			self.residual = self.payment_amount - self.total_commitment_amount

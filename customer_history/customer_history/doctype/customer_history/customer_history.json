@@ -138,6 +138,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "0.0",
    "fieldname": "total_commitment_amount",
    "fieldtype": "Currency",
    "label": "Total Payment Amount",
@@ -170,7 +171,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-12 11:28:44.333003",
+ "modified": "2024-09-05 08:59:08.697100",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Customer History",
