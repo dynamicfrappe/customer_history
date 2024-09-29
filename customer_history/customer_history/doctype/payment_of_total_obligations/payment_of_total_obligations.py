@@ -80,7 +80,8 @@ class PaymentofTotalObligations(Document):
         if sector:
             filters["sector"] = sector
         if commitment_type:
-           filters["commitment_type"] = commitment_type         
+           filters["commitment_type"] = commitment_type 
+        filters["residual"] = [">", 0]
         
         customers = frappe.get_all("Customer History", filters=filters, pluck="name")
         for customer in customers:
