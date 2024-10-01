@@ -2,7 +2,9 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Payment of Obligations', {
-	// refresh: function(frm) {
-
-	// }
+	refresh : function(frm){
+        frm.set_query("commitment_number", () => {
+            return { filters: {"residual": [">", 0]} };
+        });
+    },
 });
