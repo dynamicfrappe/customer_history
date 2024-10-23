@@ -18,10 +18,16 @@ class PaymentofTotalObligations(Document):
 
     def validate_commitment_amount(self):
         sum = 0 
+        sum_of_commitment = 0
+        sum_of_residual = 0
         for commitment in self.commitments :
             if commitment.payment_amount :
                 sum += commitment.payment_amount
-        if self.amount != sum :
+                sum_of_commitment += commitment.commitment_amount
+                sum_of_residual += commitment.residual
+        self.total_commitment_amount = sum_of_commitment
+        self.total_residual = sum_of_residual
+        if self.amount != round(sum , 2) :
             frappe.throw(_("Amount of payment of total obligations not equal total of commitment amount "))
     def validatees(self):
         total_payment = 0
