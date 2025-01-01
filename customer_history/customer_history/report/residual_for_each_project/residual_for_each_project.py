@@ -16,6 +16,7 @@ def get_date():
 	for project in projects :
 		dict ={}
 		dict["project"] = project
+		dict["sumation"] = 0.0
 		for commitment_type in commitment_types :
 			dict[f"{commitment_type}"] = 0.0
 			sql = f''' 
@@ -33,6 +34,7 @@ def get_date():
 			customer_history = frappe.db.sql(sql , as_dict = 1)
 			if customer_history :
 				dict[f"{commitment_type}"] = customer_history[0]["commitment_type"]
+				dict["sumation"] += customer_history[0]["commitment_type"]
 		list.append(dict)
 	return list
 
@@ -44,6 +46,12 @@ def get_columns():
 			"fieldname": "project",
 			"fieldtype": "Link",
 			"options" : "Customer Project Name",
+			"width": 150,
+		},
+		{
+			"label": _("Sum"),
+			"fieldname": "sumation",
+			"fieldtype": "Float",
 			"width": 150,
 		},
 	]
