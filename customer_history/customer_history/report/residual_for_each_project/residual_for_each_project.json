@@ -1,5 +1,5 @@
 {
- "add_total_row": 0,
+ "add_total_row": 1,
  "columns": [],
  "creation": "2024-11-19 13:30:00.280403",
  "disable_prepared_report": 0,
@@ -9,7 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2024-11-19 13:30:00.280403",
+ "modified": "2025-01-01 10:57:33.454925",
  "modified_by": "Administrator",
  "module": "Customer History",
  "name": "Residual For Each Project",
