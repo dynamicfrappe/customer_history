@@ -13,6 +13,8 @@ class PaymentofObligations(Document):
 	def before_submit(self):
 		if self.commitment_number :
 			self.append_payment_of_obligations()
+	def on_cancel(self):
+		self.remove_payment_of_obligations()
 
 	def calculate_residual(self):
 		customer_history = frappe.get_doc("Customer History" , self.commitment_number)
@@ -32,4 +34,13 @@ class PaymentofObligations(Document):
 				"commitment_date" : now()
 		})
 		customer_history.total_commitment_amount += self.payment_amount
+		customer_history.save()
+	def remove_payment_of_obligations(self):
+		customer_history = frappe.get_doc("Customer History", self.commitment_number)
+
+		for commitment in customer_history.commitment:
+			if commitment.voucher_type == self.doctype and commitment.voucher_no == self.name:
+				customer_history.commitment.remove(commitment)
+				customer_history.total_commitment_amount -= self.payment_amount
+				break 
 		customer_history.save()
